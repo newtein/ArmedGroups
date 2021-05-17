@@ -2,12 +2,12 @@ from data_reader import DataReader
 from copy import deepcopy
 
 OBJECTIVE_MAP = {
-            "toppling_an_existing_leadership": 'nagobj_1',
-            "change_of_regime_type": 'nagobj_2',
-            "demands_for_autonomy": 'nagobj_3',
-            "territorial_demand": 'nagobj_4',
-            "demands_for_policy_change": 'nagobj_5',
-            "other": 'nagobj_6'
+            "toppling_an_existing_leadership": 'NAGObj_1',
+            "change_of_regime_type": 'NAGObj_2',
+            "demands_for_autonomy": 'NAGObj_3',
+            "territorial_demand": 'NAGObj_4',
+            "demands_for_policy_change": 'NAGObj_5',
+            "other": 'NAGObj_6'
         }
 
 class ObjectiveProbabilityModule:

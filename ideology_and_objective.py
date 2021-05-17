@@ -8,7 +8,7 @@ class IdeologicalObjectiveModule:
     def __init__(self):
         data_obj = DataReader()
         df = data_obj.get_pandas_df()
-        self.pk = "nagcode_1"
+        self.pk = "NAGcode_1"
         self.df = df.groupby(self.pk).agg(set).reset_index()
 
     def get_ideology(self, nag_id):
@@ -25,6 +25,18 @@ class IdeologicalObjectiveModule:
                 except:
                     pass
         return list(_id)
+
+    def ideology_exists(self, nag_id):
+        ideologies = self.get_ideology(nag_id)
+        _id = {"leftist", "religious", "ethno_nationalist"}
+        flag = -1
+        for ideology in ideologies:
+            if ideology in _id:
+                flag = 1
+                break
+            elif ideology == 'no_ideology':
+                flag = 0
+        return flag
 
     def get_objective(self, nag_id):
         df = self.df[self.df[self.pk]==nag_id]

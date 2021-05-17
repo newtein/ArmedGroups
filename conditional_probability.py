@@ -2,11 +2,11 @@ from data_reader import DataReader
 from copy import deepcopy
 
 IDEOLOGY_MAP = {
-            "no_ideology": 'nagid_1',
-            "ethno_nationalist": 'nagid_2',
-            "religious": 'nagid_3',
-            "leftist": 'nagid_4',
-            "other": 'nagid_5'
+            "no_ideology": 'NAGID_1',
+            "ethno_nationalist": 'NAGID_2',
+            "religious": 'NAGID_3',
+            "leftist": 'NAGID_4',
+            "other": 'NAGID_5'
         }
 
 class IdeologicalProbabilityModule:
